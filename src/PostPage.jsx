@@ -1,7 +1,6 @@
 import React from 'react'
-import Post from './Post'
 import { useNavigate } from 'react-router-dom'
-const PostPage = ({posts, setPosts}) => {
+const PostPage = ({posts}) => {
 
   const navigation =  useNavigate()
   function navigateToPost(id){

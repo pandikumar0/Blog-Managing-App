@@ -13,9 +13,6 @@ const AddPost = ({posts, setPosts}) => {
     console.log(posted)
     localStorage.setItem('Data', JSON.stringify(posted));
   }
-  // useEffect(() => {
-  //   localStorage.setItem('Data', JSON.stringify(posts));
-  // }, [posts]);
 
     const [title,setTitle] = useState("");
     const [content, setContent] = useState("");

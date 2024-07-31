@@ -5,7 +5,45 @@ const About = () => {
     <>
     <h1>About Us</h1>
     <hr className='col-2'/>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quo ipsa illum delectus eius adipisci culpa excepturi quaerat fugiat incidunt odio ullam, atque deserunt sed aut cupiditate ratione totam explicabo libero neque maxime vel similique. Temporibus magnam labore et magni tempore officia sint explicabo similique ipsum ratione cum culpa, nam reiciendis alias dolore illo ut repellat, totam nemo? Corrupti molestiae illum et eum placeat aut laborum eius sunt maiores. Libero, fuga. Cum laudantium omnis blanditiis amet consequuntur, quaerat labore pariatur porro sint culpa dolores quasi ab vero natus, quas quam autem earum ipsa, maxime magnam aliquid quod harum dolor officia! Harum ut necessitatibus atque id ullam quae ratione voluptatem corrupti provident corporis iste mollitia rerum laudantium praesentium, deleniti, commodi odio quasi. Officia aperiam expedita, unde, magnam error provident doloremque placeat aspernatur necessitatibus possimus, vel rem nesciunt. Corrupti, error, porro maxime tempore dolores molestias delectus odit necessitatibus, distinctio corporis dolorem consequuntur ratione possimus illum quos numquam esse obcaecati? Explicabo culpa, debitis vitae totam perspiciatis sed rerum et! Autem eos a repellat quas assumenda accusantium, ea cupiditate quibusdam, commodi aliquid non ratione, eius adipisci ex ipsum repellendus culpa blanditiis maxime. Et dolorum vero aperiam, earum temporibus perspiciatis tempore dignissimos magni, officiis, nisi molestias numquam. Error ducimus, esse quaerat veritatis natus minus accusantium sed eligendi tempora modi aperiam magnam, omnis quibusdam expedita adipisci iusto ad voluptates et quasi suscipit rem. Enim possimus modi ducimus neque. Excepturi ex commodi a id eos recusandae veniam aperiam ducimus odit perspiciatis ullam enim praesentium sint cumque nulla porro aspernatur, in provident sunt? Debitis laboriosam non, qui iste provident recusandae quibusdam dolorum repudiandae? Ratione, impedit. Nisi debitis odit illum aspernatur assumenda repudiandae, quos nostrum velit veniam, deserunt ut minima eligendi quod adipisci a repellat non magni recusandae dignissimos aliquid reiciendis explicabo id enim. Voluptatum sunt molestias magnam tempora, provident rerum sed laborum facere quas suscipit nulla distinctio, explicabo quae. Quia laboriosam neque tempora dolores blanditiis labore, dolor consectetur enim cumque ab quaerat rem dicta delectus vero quae cum perferendis, repellendus qui, sint corrupti non aperiam! Deleniti quas earum quam, placeat blanditiis vero vitae, corporis, sapiente cupiditate laborum praesentium labore odit. Explicabo, vel. Non nisi tenetur beatae quibusdam illum praesentium veniam exercitationem ducimus asperiores ipsum recusandae, quasi iste cum assumenda accusamus eius laudantium quae aliquam. Pariatur iure, maxime officia soluta, accusamus animi necessitatibus, error ipsum qui exercitationem illo distinctio? Magni consequuntur facere, saepe laudantium repudiandae, quia non voluptates distinctio enim soluta beatae, veniam eum in voluptate deserunt. Quis maxime, omnis placeat officiis nulla, magnam eum soluta non mollitia, eius velit necessitatibus repellat sint sapiente impedit illo explicabo alias aliquam dignissimos provident. Officia quos a enim temporibus eos deleniti iure facilis eligendi! Vero non error suscipit nam voluptatum exercitationem sit, corporis eaque beatae sunt placeat autem ipsa, voluptates fugiat eligendi, voluptas cupiditate obcaecati delectus minima tempora quibusdam fuga officiis. Debitis cumque, esse unde alias earum aspernatur vel rerum beatae, ab blanditiis impedit quod. Pariatur consequuntur quasi nostrum eius libero vel excepturi ullam beatae corrupti facere quo recusandae dignissimos, explicabo reprehenderit.</p>
+    <h2>Bloggy: Technical Overview of a Basic React App</h2>
+    <p>
+
+Bloggy, developed by Pandikumar K, is a front-end application built using React. This simple yet effective app focuses on core blogging functionalities, including searching for blogs, adding new entries, and managing existing posts. Utilizing React Hooks, Bloggy provides an intuitive user experience while demonstrating key React principles. Here’s a closer look at the technical aspects of Bloggy:
+</p>
+<ol>
+<li>
+<h3>Adding and Managing Blogs</h3>
+
+The functionality to add and manage blogs is implemented through simple forms and state management:
+
+Adding Blogs: Users can input blog content via a form, which updates the state with the new blog data. This form uses controlled components, where form inputs are linked to state variables. Upon submission, the new blog data is added to the list of blogs, and the state is updated accordingly.
+Managing Blogs: Editing and deleting blogs are handled by updating the state. The edit functionality involves populating the form with existing blog data, allowing users to modify and save changes. Deleting a blog involves removing it from the state array and updating the UI to reflect the change.
+</li><li>
+<h3>Search Functionality</h3>
+
+The search feature is implemented using a combination of state and filtering logic:
+
+Search Input: A controlled input field updates the search query state as users type.
+Filtering Blogs: The list of blog posts is filtered based on the search query using JavaScript’s filter method. This filtered list is then rendered dynamically, ensuring that only relevant blog posts are displayed.
+</li><li>
+<h3>Component Structure</h3>
+
+Bloggy follows a modular component structure, making the codebase easier to manage and maintain:
+
+BlogList: Displays a list of blog posts. It receives blog data and rendering logic via props and is responsible for rendering individual blog entries.
+BlogForm: Manages the form for adding or editing blog posts. It includes input fields and submission handling.
+SearchBar: Contains the search input field and manages the search functionality.
+</li><li>
+<h3>User Interface</h3>
+
+The user interface of Bloggy is designed to be clean and intuitive. Basic CSS is used to style components, ensuring a responsive and user-friendly design. React’s component-based architecture allows for easy updates and customization of the UI as needed.
+</li>
+</ol>
+
+<p>
+In summary, Bloggy is a straightforward yet functional blogging app built with React Hooks. By leveraging hooks for state management and side effects, Bloggy provides a smooth and efficient blogging experience. Pandikumar K’s use of React Hooks demonstrates a solid understanding of modern React practices, creating a user-friendly application with essential blogging features.
+</p>
+
     </>
 
   )

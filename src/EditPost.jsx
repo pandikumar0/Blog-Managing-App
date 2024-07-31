@@ -98,6 +98,7 @@ const EditPost = ({ posts, setPosts }) => {
         });
 
         setPosts(updated);
+        localStorage.setItem("Data",JSON.stringify(updated));
     }
 
     function editPost(e) {

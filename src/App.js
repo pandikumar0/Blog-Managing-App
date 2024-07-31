@@ -22,7 +22,7 @@ const App = () => {
     if (psts) {
       setPosts(JSON.parse(psts));
     } else {
-      setPosts(PostData);
+      setPosts(data);
     }
   }, []);
 
