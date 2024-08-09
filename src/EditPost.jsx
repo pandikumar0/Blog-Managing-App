@@ -69,6 +69,7 @@
 // export default EditPost
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import axiosAPI from './axiosAPI';
 
 const EditPost = ({ posts, setPosts }) => {
     const navigation = useNavigate();
@@ -88,7 +89,7 @@ const EditPost = ({ posts, setPosts }) => {
         }
     }, [location.state]);
 
-    function editOnPost() {
+    async function editOnPost()  {
         const id = location.state?.id;
         const updated = posts.map((post) => {
             if (post.id === id) {
@@ -98,7 +99,8 @@ const EditPost = ({ posts, setPosts }) => {
         });
 
         setPosts(updated);
-        localStorage.setItem("Data",JSON.stringify(updated));
+        //localStorage.setItem("Data",JSON.stringify(updated));
+        const response = axiosAPI.put("/posts/"+id, {id, title, content, subtitle: subTitle, imgURL: URL})
     }
 
     function editPost(e) {

@@ -6,6 +6,7 @@ const PostPage = ({posts}) => {
   function navigateToPost(id){
     navigation("/postpage/post/"+id)
   }
+
   return (
     <ul className='post'>
         {posts.map((val)=>{

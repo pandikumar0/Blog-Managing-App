@@ -1,13 +1,15 @@
 import React from 'react'
 import {  useNavigate } from 'react-router-dom';
+import axiosAPI from './axiosAPI';
 
 const Manage = ({posts, setPosts}) => {
     const nav =useNavigate();
 
-    function handleDelete(id){
+    async function handleDelete(id){
         const filteredItems = posts.filter((x) => x.id != id)
         setPosts(filteredItems);
-        localStorage.setItem("Data", JSON.stringify(filteredItems));
+        //localStorage.setItem("Data", JSON.stringify(filteredItems));
+        await axiosAPI.delete("/posts/"+id);
     }
     function navigateToPage(id){
         nav("/postpage/post/"+id);

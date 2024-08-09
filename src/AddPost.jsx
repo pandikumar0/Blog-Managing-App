@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { format } from "date-fns";
+import axiosAPI from './axiosAPI';
 
-const AddPost = ({posts, setPosts}) => {
+const AddPost =  ({posts, setPosts}) => {
 
-  function addToPost(title, content) {
+  async function addToPost(title, content) {
     var id = posts.length > 0 ? posts[posts.length - 1].id + 1 : 1;
     var dt = format(new Date(), "MMMM dd, yyyy pp");
 
@@ -11,7 +12,8 @@ const AddPost = ({posts, setPosts}) => {
     let posted = [...posts, post]
     setPosts(posted);
     console.log(posted)
-    localStorage.setItem('Data', JSON.stringify(posted));
+    //localStorage.setItem('Data', JSON.stringify(posted));
+    const response = await axiosAPI.post("/posts",post);
   }
 
     const [title,setTitle] = useState("");

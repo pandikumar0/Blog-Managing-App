@@ -11,6 +11,7 @@ import PostData from "./PostData.jsx";
 import Post from "./Post.jsx";
 import Manage from "./Manage.jsx";
 import EditPost from "./EditPost.jsx";
+import axiosAPI from "./axiosAPI.js";
 
 const App = () => {
   var data = PostData;
@@ -18,12 +19,20 @@ const App = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    let psts = localStorage.getItem("Data");
-    if (psts) {
-      setPosts(JSON.parse(psts));
-    } else {
-      setPosts(data);
+    //let psts = localStorage.getItem("Data");
+    async function load_on_page() {
+      try {
+        let psts = await axiosAPI.get("/posts");
+        if (psts) {
+          setPosts(psts.data);
+        } else {
+          setPosts(data);
+        }
+      } catch (err) {
+        console.log(err);
+      }
     }
+    load_on_page();
   }, []);
 
   return (
